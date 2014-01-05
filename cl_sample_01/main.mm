@@ -7,12 +7,16 @@
 //
 
 #include <iostream>
+#include "Actor.h"
 
 int main(int argc, const char * argv[])
 {
 
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    Actor* actor;
+    
+    actor = [[Actor alloc] init];
+    [actor setName:@"Andi"];
+    std::cout << [[actor greeting] UTF8String];
     return 0;
 }
 
