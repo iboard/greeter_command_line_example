@@ -12,7 +12,6 @@
 @interface GreeterApp : NSObject
 
 - (BOOL)processInput: (NSString*)input;
-- (void)outputGreeting: (Actor*)forActor;
-- (BOOL) detectQuitCommand: (NSString *)command;
 - (NSString*) getInput: (const char*)prompt;
+
 @end

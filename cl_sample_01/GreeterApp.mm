@@ -19,7 +19,6 @@
     return [NSString stringWithUTF8String:word];
 }
 
-
 - (void)outputGreeting: (Actor*)forActor
 {
     std::cout << [[forActor greeting] UTF8String];
