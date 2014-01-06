@@ -22,8 +22,7 @@
 - (void)setUp
 {
     [super setUp];
-    actor = [[Actor alloc] init];
-    [actor setName:@"Nobody"];
+    actor = [[Actor alloc] init]; [actor setName:@"Nobody"];
     app = [[GreeterApp alloc] init];
 }
 
