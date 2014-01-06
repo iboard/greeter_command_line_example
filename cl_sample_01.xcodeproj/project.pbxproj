@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00721B13187A039600512775 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00721B12187A039600512775 /* main.mm */; };
+		00721B13187A039600512775 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00721B12187A039600512775 /* main.m */; };
 		00721B15187A039600512775 /* cl_sample_01.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00721B14187A039600512775 /* cl_sample_01.1 */; };
 		00E3C852187A065700B3DEBB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E3C851187A065700B3DEBB /* XCTest.framework */; };
 		00E3C858187A065700B3DEBB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00E3C856187A065700B3DEBB /* InfoPlist.strings */; };
@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		00721B0F187A039600512775 /* cl_sample_01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cl_sample_01; sourceTree = BUILT_PRODUCTS_DIR; };
-		00721B12187A039600512775 /* main.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; path = main.mm; sourceTree = "<group>"; };
+		00721B12187A039600512775 /* main.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; path = main.m; sourceTree = "<group>"; };
 		00721B14187A039600512775 /* cl_sample_01.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = cl_sample_01.1; sourceTree = "<group>"; };
 		00E3C84F187A065700B3DEBB /* cl_sample_01 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cl_sample_01 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E3C851187A065700B3DEBB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -99,10 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				00E3C861187A07EB00B3DEBB /* Actor.h */,
+				00E3C862187A07EB00B3DEBB /* Actor.m */,
 				00E3C865187ABCC800B3DEBB /* GreeterApp.h */,
 				00E3C866187ABCC800B3DEBB /* GreeterApp.mm */,
-				00E3C862187A07EB00B3DEBB /* Actor.m */,
-				00721B12187A039600512775 /* main.mm */,
+				00721B12187A039600512775 /* main.m */,
 				00721B14187A039600512775 /* cl_sample_01.1 */,
 			);
 			path = cl_sample_01;
@@ -221,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00721B13187A039600512775 /* main.mm in Sources */,
+				00721B13187A039600512775 /* main.m in Sources */,
 				00E3C863187A07EB00B3DEBB /* Actor.m in Sources */,
 				00E3C867187ABCC800B3DEBB /* GreeterApp.mm in Sources */,
 			);

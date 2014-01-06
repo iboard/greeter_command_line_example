@@ -10,8 +10,16 @@
 #import "Actor.h"
 
 @interface GreeterApp : NSObject
+{
+    Actor* actor;
+}
 
+- (Actor*) setActor: (Actor*)actor;
+
+// run in a loop until user inputs 'q'
+- (void)run;
+
+// process a single input
 - (BOOL)processInput: (NSString*)input;
-- (NSString*) getInput: (const char*)prompt;
 
 @end

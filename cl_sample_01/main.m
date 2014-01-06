@@ -11,15 +11,15 @@
 //  Copyright (c) 2014 Andreas Altendorfer. All rights reserved.
 //
 
-#include <iostream>
 #include "GreeterApp.h"
-
 
 int main(int argc, const char * argv[])
 {
     @autoreleasepool {
+        Actor* actor= [[Actor alloc] init];
         GreeterApp *app = [[GreeterApp alloc] init];
-        while ([app processInput:[app getInput:"Enter your name or 'q': "]]) {}
+        [app setActor:actor];
+        [app run];
     }
     return 0;
 }

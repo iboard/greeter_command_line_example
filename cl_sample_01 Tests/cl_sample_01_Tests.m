@@ -24,6 +24,7 @@
     [super setUp];
     actor = [[Actor alloc] init]; [actor setName:@"Nobody"];
     app = [[GreeterApp alloc] init];
+    [app setActor:actor];
 }
 
 - (void)tearDown
@@ -46,7 +47,13 @@
 
 - (void)testProcessInputStopsOnQ
 {
-    XCTAssertTrue([app processInput:@"q"] == FALSE, "Process input q shout return FALSE");
+    XCTAssertTrue([app processInput:@"q"] == FALSE, "Process input q should return FALSE");
+}
+
+- (void)testProcessInputWithValueSetsActorsName
+{
+    [app processInput:@"Frank"];
+    XCTAssertTrue([actor.name isEqualToString:@"Frank"], "Actor sould be 'Frank' but is %s", [actor.name UTF8String]);
 }
 
 

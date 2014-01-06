@@ -10,6 +10,29 @@
 
 @implementation GreeterApp
 
+- (Actor*) setActor: (Actor*)_actor
+{
+    actor = _actor;
+    return actor;
+}
+
+- (BOOL)processInput: (NSString*)input
+{
+    if ( ![self detectQuitCommand:input] ) {
+        [actor setName:input];
+        [self outputGreeting:actor];
+        return TRUE;
+    }
+    return FALSE;
+}
+
+- (void)run
+{
+  while ([self processInput:[self getInput:"Enter your name or 'q': "]]) {}
+}
+
+
+// private
 
 - (NSString*) getInput: (const char*)prompt
 {
@@ -29,16 +52,6 @@
     return [command isEqualToString:@"q"];
 }
 
-- (BOOL)processInput: (NSString*)input
-{
-    Actor* actor= [[Actor alloc] init];
-    
-    if ( ![self detectQuitCommand:input] ) {
-        [actor setName:input];
-        [self outputGreeting:actor];
-        return TRUE;
-    }
-    return FALSE;
-}
+
 
 @end
