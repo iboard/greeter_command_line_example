@@ -10,7 +10,8 @@
 
 @implementation Actor
 
--(NSString*) name {
+-(NSString*) name
+{
     return name;
 }
 

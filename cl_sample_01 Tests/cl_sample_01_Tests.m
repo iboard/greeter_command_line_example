@@ -22,9 +22,8 @@
 - (void)setUp
 {
     [super setUp];
-    actor = [[Actor alloc] init]; [actor setName:@"Nobody"];
-    app = [[GreeterApp alloc] init];
-    [app setActor:actor];
+    actor = [[Actor alloc] init];    [actor setName:@"Nobody"];
+    app = [[GreeterApp alloc] init]; [app setActor:actor];
 }
 
 - (void)tearDown
@@ -32,27 +31,28 @@
     [super tearDown];
 }
 
+// Tests
+
 - (void)testActorName
 {
-    XCTAssertTrue([actor.name isEqualToString:@"Nobody"],
-                  @"Expect 'Nobody' but got %s", [actor.name UTF8String]
-                  );
+    XCTAssertTrue([actor.name isEqualToString:@"Nobody"], @"Expect 'Nobody' but got %s", [actor.name UTF8String]);
 }
 
 - (void)testGreeting
 {
     XCTAssertTrue([actor.greeting isEqualToString:@"Hello Nobody!\n"],
-                  @"Expect 'Hello Nobody' but got %s", [actor.greeting UTF8String]);
+                  @"Expect 'Hello Nobody!<CR>' but got %s", [actor.greeting UTF8String]);
 }
 
-- (void)testProcessInputStopsOnQ
+- (void)testProcessInputStopsOnQAndDoesNotChangeValue
 {
-    XCTAssertTrue([app processInput:@"q"] == FALSE, "Process input q should return FALSE");
+    XCTAssertTrue([app processInput:@"q"] == FALSE, "Process input q should return FALSE but didn't.");
+    XCTAssertTrue([actor.name isEqualToString:@"Nobody"], @"Expect 'Nobody' but got %s", [actor.name UTF8String]);
 }
 
 - (void)testProcessInputWithValueSetsActorsName
 {
-    [app processInput:@"Frank"];
+    XCTAssertTrue([app processInput:@"Frank"] == TRUE, "Process with Frank should return TRUE but didn't.");
     XCTAssertTrue([actor.name isEqualToString:@"Frank"], "Actor sould be 'Frank' but is %s", [actor.name UTF8String]);
 }
 

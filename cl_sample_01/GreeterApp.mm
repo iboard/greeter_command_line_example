@@ -47,9 +47,9 @@
     std::cout << [[forActor greeting] UTF8String];
 }
 
-- (BOOL) detectQuitCommand: (NSString *)command
+- (BOOL) detectQuitCommand: (NSString *)input
 {
-    return [command isEqualToString:@"q"];
+    return [input isEqualToString:@"q"];
 }
 
 
