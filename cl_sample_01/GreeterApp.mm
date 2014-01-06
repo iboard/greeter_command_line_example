@@ -20,7 +20,7 @@
 {
     if ( ![self detectQuitCommand:input] ) {
         [actor setName:input];
-        [self outputGreeting:actor];
+        [self outputGreeting];
         return TRUE;
     }
     return FALSE;
@@ -42,9 +42,9 @@
     return [NSString stringWithUTF8String:word];
 }
 
-- (void)outputGreeting: (Actor*)forActor
+- (void)outputGreeting
 {
-    std::cout << [[forActor greeting] UTF8String];
+    std::cout << [[actor greeting] UTF8String];
 }
 
 - (BOOL) detectQuitCommand: (NSString *)input
