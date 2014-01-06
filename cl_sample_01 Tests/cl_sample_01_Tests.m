@@ -29,31 +29,12 @@
     [super tearDown];
 }
 
-//- (void)testExample
-//{
-//    // XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-//    XCTAssertTrue(1 == 1, @"End of universe");
-//}
-
-//- (void)testActorClass
-//{
-//    XCTAssertTrue(actor != NULL, @"Actor should not be NULL");
-//}
-
 - (void)testActorName
 {
     XCTAssertTrue([actor.name isEqualToString:@"Nobody"],
                   @"Expect 'Nobody' but got %s", [actor.name UTF8String]
                   );
 }
-
-//- (void)testSetActorName
-//{
-//    [actor setName:@"Mr. Nice"];
-//    XCTAssertTrue([actor.name isEqualToString:@"Mr. Nice"],
-//                  @"Name should be 'Mr. Nice' but got %s",[actor.name UTF8String]
-//                  );
-//}
 
 - (void)testGreeting
 {
