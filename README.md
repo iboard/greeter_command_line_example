@@ -6,24 +6,24 @@ A Mac OS X Objective-C example of a test driven command-line application.
 
 1. Clone from github
 
-    > $ git clone git@github.com:iboard/greeter_command_line_example.git
+    $ git clone git@github.com:iboard/greeter_command_line_example.git
 
 2. Open in XCode
 
-    > $ open -a XCode cl_sample_01.xcodeproj
+    $ open -a XCode cl_sample_01.xcodeproj
 
 3. Run Tests
 
-    > Test Suite 'All tests' finished at 2014-01-06 12:06:06 +0000.
-    > Executed 4 tests, with 0 failures (0 unexpected) in 0.000 (0.002) seconds
+    Test Suite 'All tests' finished at 2014-01-06 12:06:06 +0000.
+    Executed 4 tests, with 0 failures (0 unexpected) in 0.000 (0.002) seconds
 
 4. Run App
 
-    > Enter your name or 'q': Your Name
-    > Hello Your!
-    > Enter your name or 'q': Hello Name!
-    > Enter your name or 'q': q
-    > Program ended with exit code: 0
+    Enter your name or 'q': Your Name
+    Hello Your!
+    Enter your name or 'q': Hello Name!
+    Enter your name or 'q': q
+    Program ended with exit code: 0
     
     
 LICENSE
