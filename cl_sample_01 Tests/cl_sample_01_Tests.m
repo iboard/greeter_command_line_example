@@ -8,10 +8,12 @@
 
 #import <XCTest/XCTest.h>
 #import "Actor.h"
+#import "GreeterApp.h"
 
 @interface cl_sample_01_Tests : XCTestCase
 {
   Actor* actor;
+  GreeterApp* app;
 }
 @end
 
@@ -22,6 +24,7 @@
     [super setUp];
     actor = [[Actor alloc] init];
     [actor setName:@"Nobody"];
+    app = [[GreeterApp alloc] init];
 }
 
 - (void)tearDown
@@ -40,6 +43,11 @@
 {
     XCTAssertTrue([actor.greeting isEqualToString:@"Hello Nobody!\n"],
                   @"Expect 'Hello Nobody' but got %s", [actor.greeting UTF8String]);
+}
+
+- (void)testProcessInputStopsOnQ
+{
+    XCTAssertTrue([app processInput:@"q"] == FALSE, "Process input q shout return FALSE");
 }
 
 
