@@ -55,6 +55,7 @@
 		00E3C866187ABCC800B3DEBB /* GreeterApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GreeterApp.mm; sourceTree = "<group>"; };
 		00E3C869187AD38100B3DEBB /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
 		00E3C86A187AD38100B3DEBB /* Actor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actor.m; sourceTree = "<group>"; };
+		00E3C86D187AD3FC00B3DEBB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		00721B06187A039600512775 = {
 			isa = PBXGroup;
 			children = (
+				00E3C86D187AD3FC00B3DEBB /* README.md */,
 				00721B11187A039600512775 /* cl_sample_01 */,
 				00E3C853187A065700B3DEBB /* cl_sample_01 Tests */,
 				00E3C850187A065700B3DEBB /* Frameworks */,
