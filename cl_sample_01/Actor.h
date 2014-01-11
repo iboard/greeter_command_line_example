@@ -11,12 +11,16 @@
 @interface Actor : NSObject
 {
     NSString* name;
+    NSDate*   dayOfBirth;
 }
 
 - (NSString*)name;
 - (void) setName: (NSString*)input;
-
+- (NSDate*)dayOfBirth;
+- (void) setDayOfBirth: (NSDate*)date;
+- (NSString*)dayOfBirthString;
 - (NSString*)greeting;
+- (int)ageInDays;
 
 @end
 

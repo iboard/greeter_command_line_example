@@ -14,6 +14,7 @@
 {
   Actor* actor;
   GreeterApp* app;
+  NSDate* testBirthday;
 }
 @end
 
@@ -24,6 +25,7 @@
     [super setUp];
     actor = [[Actor alloc] init];    [actor setName:@"Nobody"];
     app = [[GreeterApp alloc] init]; [app setActor:actor];
+    testBirthday = [NSDate dateWithString:@"1964-08-31 00:00:00 +02:00"];
 }
 
 - (void)tearDown
@@ -56,6 +58,19 @@
     XCTAssertTrue([actor.name isEqualToString:@"Frank"], "Actor sould be 'Frank' but is %s", [actor.name UTF8String]);
 }
 
+- (void)testActorAge
+{
+    [actor setDayOfBirth:testBirthday];
+
+    XCTAssertTrue( [actor.dayOfBirth isEqualToDate:testBirthday], @"Expect '1964-08-31' but got something different %@", [actor dayOfBirthString] );
+    XCTAssertTrue( [actor.dayOfBirthString isEqualToString:@"1964-08-31 00:58:00 +0100"], @"1964-08-31 00:58:00 +0100' but got something different %@", [actor dayOfBirthString] );
+}
+
+- (void)testActorAgeInDays
+{
+    [actor setDayOfBirth:testBirthday];
+    XCTAssertTrue( [actor ageInDays] == 100 , @"Expect 100 but got %d", [actor ageInDays] );
+}
 
 
 @end
