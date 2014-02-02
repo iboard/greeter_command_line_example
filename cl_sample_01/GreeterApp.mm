@@ -20,21 +20,12 @@
 {
     if ( ![self detectQuitCommand:name] ) {
         [actor setName:name];
-        if (birthday == NULL) {
-          [actor setDayOfBirth: [self getDayOfBirth]];
-        }
+        [self setBirthday:birthday];
         [self outputGreeting];
         return TRUE;
     }
     return FALSE;
 }
-
-- (NSDate *)getDayOfBirth
-{
-    NSString *word = [self getInput:"Yor of birthday (YYYY-MM-DD): "];
-    NSString *dateString = [[NSString alloc] initWithFormat:@"%@ 00:00:00 +0000", word];
-    return [[NSDate alloc] initWithString:dateString];
-} 
 
 - (void)run
 {
@@ -43,6 +34,21 @@
 
 
 // private
+- (NSDate *)askDateOfBirth
+{
+    NSString *word = [self getInput:"Yor of birthday (YYYY-MM-DD): "];
+    NSString *dateString = [[NSString alloc] initWithFormat:@"%@ 00:00:00 +0000", word];
+    return [[NSDate alloc] initWithString:dateString];
+}
+
+
+- (void)setBirthday: (NSDate *)birthday
+{
+    if (birthday == NULL) {
+        [actor setDayOfBirth: [self askDateOfBirth]];
+    }
+}
+
 
 - (NSString*) getInput: (const char*)prompt
 {
@@ -57,7 +63,7 @@
     std::cout << [[actor greeting] UTF8String];
 }
 
-- (BOOL) detectQuitCommand: (NSString *)input
+- (BOOL)detectQuitCommand: (NSString *)input
 {
     return [input isEqualToString:@"q"];
 }
