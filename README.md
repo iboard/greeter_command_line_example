@@ -18,8 +18,8 @@ $ open -a XCode cl_sample_01.xcodeproj
 3. Run Tests
 
 ```
-Test Suite 'All tests' finished at 2014-01-06 12:06:06 +0000.
-Executed 4 tests, with 0 failures (0 unexpected) in 0.000 (0.002) seconds
+Test Suite 'All tests' finished at 2014-02-02 09:50:53 +0000.
+Executed 6 tests, with 0 failures (0 unexpected) in 0.002 (0.007) seconds
 ```
 
 See `cl_sample_01 Tests/cl_sample_01_Tests.m`
@@ -27,10 +27,12 @@ See `cl_sample_01 Tests/cl_sample_01_Tests.m`
 4. Run App
 
 ```
-Enter your name or 'q': Zappa
-Hello Zappa!
-Enter your name or 'q': q
-Program ended with exit code: 0
+    Enter your name or 'q': Zappa
+    Yor of birthday (YYYY-MM-DD): 1964-08-31
+    Hello Zappa!
+    You're 18052 days old.
+    Enter your name or 'q': q
+    Program ended with exit code: 0
 ```
     
     
