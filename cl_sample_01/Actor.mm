@@ -8,7 +8,7 @@
 #include <iostream>
 #import "Actor.h"
 
-#define SECONDS_PER_DAY 3600 / 24
+#define SECONDS_PER_DAY (3600 * 24)
 
 @implementation Actor
 
