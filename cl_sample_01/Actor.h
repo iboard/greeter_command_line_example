@@ -20,7 +20,7 @@
 - (void) setDayOfBirth: (NSDate*)date;
 - (NSString*)dayOfBirthString;
 - (NSString*)greeting;
-- (int)ageInDays;
+- (NSTimeInterval)ageInDays;
 
 @end
 

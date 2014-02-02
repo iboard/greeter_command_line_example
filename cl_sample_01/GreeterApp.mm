@@ -16,19 +16,29 @@
     return actor;
 }
 
-- (BOOL)processInput: (NSString*)input
+- (BOOL)processInput: (NSString *)name use_birthday:(NSDate *)birthday
 {
-    if ( ![self detectQuitCommand:input] ) {
-        [actor setName:input];
+    if ( ![self detectQuitCommand:name] ) {
+        [actor setName:name];
+        if (birthday == NULL) {
+          [actor setDayOfBirth: [self getDayOfBirth]];
+        }
         [self outputGreeting];
         return TRUE;
     }
     return FALSE;
 }
 
+- (NSDate *)getDayOfBirth
+{
+    NSString *word = [self getInput:"Yor of birthday (YYYY-MM-DD): "];
+    NSString *dateString = [[NSString alloc] initWithFormat:@"%@ 00:00:00 +0000", word];
+    return [[NSDate alloc] initWithString:dateString];
+} 
+
 - (void)run
 {
-  while ([self processInput:[self getInput:"Enter your name or 'q': "]]) {}
+  while ([self processInput:[self getInput:"Enter your name or 'q': "] use_birthday:NULL]) {}
 }
 
 

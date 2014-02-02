@@ -20,6 +20,5 @@
 - (void)run;
 
 // process a single input
-- (BOOL)processInput: (NSString*)input;
-
+- (BOOL)processInput: (NSString *)name use_birthday:(NSDate *)birthday;
 @end

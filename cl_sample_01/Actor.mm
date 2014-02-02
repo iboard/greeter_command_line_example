@@ -5,8 +5,10 @@
 //  Created by Andreas Altendorfer on 05.01.14.
 //  Copyright (c) 2014 Andreas Altendorfer. All rights reserved.
 //
-
+#include <iostream>
 #import "Actor.h"
+
+#define SECONDS_PER_DAY 3600 / 24
 
 @implementation Actor
 
@@ -45,12 +47,13 @@
 
 - (NSString*)greeting
 {
-    return [NSString stringWithFormat:@"Hello %s!\n", [name UTF8String]];
+    return [NSString stringWithFormat:@"Hello %s!\nYou're %.0f days old.\n",
+            [name UTF8String],[self ageInDays]];
 }
 
-- (int)ageInDays
+- (NSTimeInterval)ageInDays
 {
-    return 100;
+    return [[[NSDate alloc] init] timeIntervalSinceDate:dayOfBirth] / SECONDS_PER_DAY;
 }
 
 

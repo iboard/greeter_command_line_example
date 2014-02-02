@@ -14,8 +14,8 @@
 		00E3C85A187A065700B3DEBB /* cl_sample_01_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E3C859187A065700B3DEBB /* cl_sample_01_Tests.m */; };
 		00E3C867187ABCC800B3DEBB /* GreeterApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00E3C866187ABCC800B3DEBB /* GreeterApp.mm */; };
 		00E3C868187ABCC800B3DEBB /* GreeterApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00E3C866187ABCC800B3DEBB /* GreeterApp.mm */; };
-		00E3C86B187AD38100B3DEBB /* Actor.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E3C86A187AD38100B3DEBB /* Actor.m */; };
-		00E3C86C187AD38100B3DEBB /* Actor.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E3C86A187AD38100B3DEBB /* Actor.m */; };
+		00E3C86B187AD38100B3DEBB /* Actor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00E3C86A187AD38100B3DEBB /* Actor.mm */; };
+		00E3C86C187AD38100B3DEBB /* Actor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00E3C86A187AD38100B3DEBB /* Actor.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		00E3C865187ABCC800B3DEBB /* GreeterApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreeterApp.h; sourceTree = "<group>"; };
 		00E3C866187ABCC800B3DEBB /* GreeterApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GreeterApp.mm; sourceTree = "<group>"; };
 		00E3C869187AD38100B3DEBB /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
-		00E3C86A187AD38100B3DEBB /* Actor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actor.m; sourceTree = "<group>"; };
+		00E3C86A187AD38100B3DEBB /* Actor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Actor.mm; sourceTree = "<group>"; };
 		00E3C86D187AD3FC00B3DEBB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				00E3C869187AD38100B3DEBB /* Actor.h */,
-				00E3C86A187AD38100B3DEBB /* Actor.m */,
+				00E3C86A187AD38100B3DEBB /* Actor.mm */,
 				00E3C865187ABCC800B3DEBB /* GreeterApp.h */,
 				00E3C866187ABCC800B3DEBB /* GreeterApp.mm */,
 				00721B12187A039600512775 /* main.m */,
@@ -225,7 +225,7 @@
 			files = (
 				00721B13187A039600512775 /* main.m in Sources */,
 				00E3C867187ABCC800B3DEBB /* GreeterApp.mm in Sources */,
-				00E3C86B187AD38100B3DEBB /* Actor.m in Sources */,
+				00E3C86B187AD38100B3DEBB /* Actor.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +235,7 @@
 			files = (
 				00E3C85A187A065700B3DEBB /* cl_sample_01_Tests.m in Sources */,
 				00E3C868187ABCC800B3DEBB /* GreeterApp.mm in Sources */,
-				00E3C86C187AD38100B3DEBB /* Actor.m in Sources */,
+				00E3C86C187AD38100B3DEBB /* Actor.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +405,7 @@
 				00E3C85F187A065700B3DEBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
